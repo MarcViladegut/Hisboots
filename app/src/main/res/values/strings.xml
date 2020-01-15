@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Hisboots</string>
+    <string name="you_are_not_a_member">You are not a member?</string>
+    <string name="register">Register</string>
+    <string name="welcome">Welcome</string>
+    <string name="niceToSeeYouAgain">Nice to see you again!</string>
+    <string name="login">Login</string>
+    <string name="helloThere">Hello there</string>
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="needHelp">Need help?</string>
+    <string name="left_arrow">Left arrow</string>
+    <string name="repeatPassword">Repeat password</string>
+    <string name="fullName">Full name</string>
+    <string name="default_advertisement">Default advertisement</string>
+    <string name="register_now">Register now</string>
+    <string name="create_account">Create account</string>
+    <string name="emptyFieldsMessage">There are an empty fields</string>
+    <string name="passwordsNotEquals">The passwords are not equals</string>
+    <string name="ShortPassword">The password must be more than 6</string>
+    <string name="emailNotValid">The email is not valid</string>
+    <string name="reset_password">Reset password</string>
+    <string name="don_t_remember_your_email_address">Don\'t remember your email address?</string>
+    <string name="for_a_new_account">for a new account</string>
+    <string name="recover_password_text">For instructions to reset your password, enter your email address associated to the account below.</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="confirmed_email">An email has been sent to this address</string>
+</resources>
