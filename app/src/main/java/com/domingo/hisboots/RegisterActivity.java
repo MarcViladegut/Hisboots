@@ -53,6 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(checkInformation())
+                    /* TODO Save the data on Firebase */
                     finish();
             }
         });

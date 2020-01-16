@@ -20,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.button.MaterialButton;
+
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -54,12 +56,21 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         needHelp = new Dialog(LoginActivity.this);
-
         TextView needHelpButton = findViewById(R.id.needHelpButton);
         needHelpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showNeedHelpDialog();
+            }
+        });
+
+        MaterialButton loginButton =  findViewById(R.id.secondLoginButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
@@ -86,9 +97,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 /* TODO Recover the password */
 
-                if (checkInformation(email, advertisement))
+                if (checkInformation(email, advertisement)) {
                     Toast.makeText(LoginActivity.this, getString(R.string.confirmed_email), Toast.LENGTH_LONG).show();
                     needHelp.dismiss();
+                }
             }
         });
 

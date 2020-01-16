@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.circularreveal.CircularRevealFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="@dimen/cardview_default_elevation">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgNews"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="News image"
+                android:scaleType="centerCrop"
+                android:transitionName="img" />
+
+            <ImageView
+                android:id="@+id/shadowBottom"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignBottom="@+id/imgNews"
+                android:contentDescription="News shadow bottom"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bottom_shadow" />
+
+            <ProgressBar
+                android:id="@+id/progressBarPhotoNews"
+                style="@android:style/Widget.Material.ProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgNews"
+                android:layout_alignStart="@+id/titleNews"
+                android:layout_alignTop="@+id/layoutDate"
+                android:background="@drawable/round_white"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_account_circle_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/authorNews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/regular"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="Unknown"
+                        android:textColor="@color/gray" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layoutDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgNews"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-50dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/round_white"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_today_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/publishedAt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/regular"
+                        android:textColor="@color/gray"
+                        android:text="Unknown data" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/titleNews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgNews"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/red"
+                android:text="Unknown title"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/descriptionNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleNews"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/light"
+                android:textColor="@color/gray"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="There is no description for this news" />
+
+            <TextView
+                android:id="@+id/sourceNews"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/descriptionNews"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/light"
+                android:textColor="@color/red"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Unknown"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/timeNews"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/descriptionNews"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/sourceNews"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/light"
+                android:textColor="@color/gray"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Unknown time" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</com.google.android.material.circularreveal.CircularRevealFrameLayout>
